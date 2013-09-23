@@ -1,0 +1,18 @@
+[
+{
+ "modid" : "GreenJukebox",
+ "name" : "Green Jukebox",
+ "version" : "0.1",
+ "credits" : "",
+ "authors" : [
+   "FunshineX"
+ ],
+ "description" : "Causes plants to grow when playing records",
+ "url" : "",
+ "updateUrl" : "",
+ "logoFile" : "",
+ "parent" : "",
+ "screenshots" : [ ""
+ ]
+}
+]
