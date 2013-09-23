@@ -7,11 +7,11 @@
   
   <!-- Delete files from previous build -->
   <target name="clean">
-    <delete file="${build.dir.development}\mcp\src\minecraft\mcmod.info" />
-    <delete dir="${build.dir.development}\mcp\src\minecraft\com\funshinex" />
-    <delete dir="${build.dir.development}\mcp\reobf\minecraft\" />
+    <delete file="${build.dir.development}\forge\mcp\src\minecraft\mcmod.info" />
+    <delete dir="${build.dir.development}\forge\mcp\src\minecraft\net\funshinex" />
+    <delete dir="${build.dir.development}\forge\mcp\reobf\minecraft\" />
   </target>
-  
+
   <!-- Increment build number -->
   <target name="increment_build_number">
     <propertyfile file="build_number.properties">
