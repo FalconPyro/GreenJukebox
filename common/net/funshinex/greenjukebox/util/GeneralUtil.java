@@ -2,6 +2,7 @@ package net.funshinex.greenjukebox.util;
 
 import java.util.Random;
 
+import net.funshinex.greenjukebox.block.BlockInfo;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockCocoa;
 import net.minecraft.block.BlockCrops;
@@ -45,6 +46,27 @@ public class GeneralUtil {
             }
 
             return true;
+        }
+        else if(id == Block.cactus.blockID || id == Block.reed.blockID)
+        {
+        	if(!world.isRemote)
+        	{
+        		if((double)world.rand.nextFloat() < 0.45 && world.isAirBlock(x, y+1, z))
+        		{
+        			if(BlockInfo.LIMIT_GROWTH_TO_VANILLA)
+        			{
+        				if(world.getBlockId(x,y-2,z) != id)
+        				{
+        					world.setBlock(x, y+1, z, id);
+        				}
+        			}
+        			else
+        			{
+        				world.setBlock(x, y+1, z, id);
+        			}
+        		}
+        	}
+        	return true;
         }
         else if (id != Block.mushroomBrown.blockID && id != Block.mushroomRed.blockID)
         {

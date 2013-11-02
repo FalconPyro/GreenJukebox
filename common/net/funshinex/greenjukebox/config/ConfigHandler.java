@@ -16,6 +16,7 @@ public class ConfigHandler {
 		BlockInfo.GROWTH_TIME = config.get("General", BlockInfo.GROWTH_TIME_KEY, BlockInfo.GROWTH_TIME_DEFAULT).getInt();
 		BlockInfo.GROWTH_RANGE = config.get("General", BlockInfo.GROWTH_RANGE_KEY, BlockInfo.GROWTH_RANGE_DEFAULT).getInt();
 		
+		BlockInfo.LIMIT_GROWTH_TO_VANILLA = config.get("General", BlockInfo.LIMIT_GROWTH_KEY, BlockInfo.LIMIT_GROWTH_DEFULT).getBoolean(true);
 		
 		config.save();
 	}

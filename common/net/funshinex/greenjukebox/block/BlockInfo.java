@@ -23,4 +23,9 @@ public class BlockInfo {
     public static int GROWTH_RANGE;
     public static final String GROWTH_RANGE_KEY="GrowthRange";
     public static final int GROWTH_RANGE_DEFAULT=7;
+    
+    
+    public static boolean LIMIT_GROWTH_TO_VANILLA;
+    public static final String LIMIT_GROWTH_KEY = "CactusVanillaGrowthHight";
+    public static final boolean LIMIT_GROWTH_DEFULT = true;
 }
