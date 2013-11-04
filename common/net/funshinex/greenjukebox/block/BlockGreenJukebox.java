@@ -73,7 +73,10 @@ public class BlockGreenJukebox extends BlockJukeBox {
         			world.playAuxSFXAtEntity((EntityPlayer)null, 1005, x, y, z, hand.itemID);
         		}
         		else {
-        			player.addChatMessage("What are you holding?");
+        			if(!world.isRemote)
+        			{
+        				player.addChatMessage("What are you holding?");
+        			}
         		}
         			
         	}
