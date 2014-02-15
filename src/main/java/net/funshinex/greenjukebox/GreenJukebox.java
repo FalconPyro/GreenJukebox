@@ -25,7 +25,6 @@ public class GreenJukebox {
 	public void preInit(FMLPreInitializationEvent event) {
 		
 		ConfigHandler.init(event.getSuggestedConfigurationFile());
-		
 		GJ_Blocks.init();
 	}
 	

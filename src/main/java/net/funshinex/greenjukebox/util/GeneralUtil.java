@@ -3,7 +3,6 @@ package net.funshinex.greenjukebox.util;
 import net.funshinex.greenjukebox.block.BlockInfo;
 import net.minecraft.block.Block;
 import net.minecraft.block.IGrowable;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemRecord;
@@ -18,7 +17,7 @@ public class GeneralUtil {
 		{
 			if(stack == null)
 			{
-				InterfaceBoneMeal(world,x,y,z);
+				applyBonemeal(world,x,y,z);
 			}
 			else
 			{
@@ -26,62 +25,62 @@ public class GeneralUtil {
 				{
 					if(stack.getItem() == Items.record_11 && world.getBlock(x, y, z) == Blocks.potatoes)
 					{
-						InterfaceBoneMeal(world, x, y, z);
+						applyBonemeal(world, x, y, z);
 					}
 					else if(stack.getItem() == Items.record_cat && world.getBlock(x, y, z) == Blocks.cactus)
 					{
-						InterfaceBoneMeal(world,x,y,z );
+						applyBonemeal(world,x,y,z );
 					}
 					else if(stack.getItem() == Items.record_13 && world.getBlock(x, y, z) == Blocks.reeds)
 					{
-						InterfaceBoneMeal(world,x,y,z );
+						applyBonemeal(world,x,y,z );
 					}
 					else if(stack.getItem() == Items.record_blocks && world.getBlock(x, y, z) == Blocks.carrots)
 					{
-						InterfaceBoneMeal(world,x,y,z );
+						applyBonemeal(world,x,y,z );
 					}
 					else if(stack.getItem() == Items.record_chirp && world.getBlock(x, y, z) == Blocks.sapling)
 					{
-						InterfaceBoneMeal(world,x,y,z );
+						applyBonemeal(world,x,y,z );
 					}
 					else if(stack.getItem() == Items.record_ward && world.getBlock(x, y, z) == Blocks.wheat)
 					{
-						InterfaceBoneMeal(world,x,y,z );
+						applyBonemeal(world,x,y,z );
 					}
 					else if(stack.getItem() == Items.record_wait && world.getBlock(x,y,z) == Blocks.red_mushroom)
 					{
-						InterfaceBoneMeal(world,x,y,z );
+						applyBonemeal(world,x,y,z );
 					}
 					else if(stack.getItem() == Items.record_stal && world.getBlock(x,y,z) == Blocks.brown_mushroom)
 					{
-						InterfaceBoneMeal(world,x,y,z );
+						applyBonemeal(world,x,y,z );
 					}
 					else if(stack.getItem() == Items.record_far && world.getBlock(x, y, z) == Blocks.pumpkin_stem)
 					{
-						InterfaceBoneMeal(world,x,y,z );
+						applyBonemeal(world,x,y,z );
 					}
 					else if(stack.getItem() == Items.record_mall && world.getBlock(x, y, z) == Blocks.cocoa)
 					{
-						InterfaceBoneMeal(world,x,y,z );
+						applyBonemeal(world,x,y,z );
 					}
 					else if(stack.getItem() == Items.record_mellohi && world.getBlock(x,y,z) == Blocks.melon_stem)
 					{
-						InterfaceBoneMeal(world,x,y,z );
+						applyBonemeal(world,x,y,z );
 					}
 					else if(world.getBlock(x, y, z) == Blocks.grass)
 					{
-						InterfaceBoneMeal(world,x,y,z );
+						applyBonemeal(world,x,y,z );
 					}
 				}
 			}
 		}
 		else
 		{
-			InterfaceBoneMeal(world, x, y, z);
+			applyBonemeal(world, x, y, z);
 		}
 	}
 
-	public static void InterfaceBoneMeal(World world, int x, int y, int z)
+	public static void applyBonemeal(World world, int x, int y, int z)
 	{
 		Block block = world.getBlock(x, y, z);
 		if(block != null)

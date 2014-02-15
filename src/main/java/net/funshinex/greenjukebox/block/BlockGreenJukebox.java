@@ -1,6 +1,5 @@
 package net.funshinex.greenjukebox.block;
 
-import net.funshinex.greenjukebox.chatcomponents.GreenJukeboxChat;
 import net.funshinex.greenjukebox.tileentity.TileEntityGreenRecordPlayer;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockJukebox;
@@ -12,7 +11,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
-import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
