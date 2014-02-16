@@ -46,9 +46,9 @@ public class TileEntityGreenRecordPlayer extends TileEntityJukebox {
 		int randX = worldObj.rand.nextInt(range*2+1) - range; // default -7 through 7
 		int randZ = worldObj.rand.nextInt(range*2+1) - range;
 		
-		GeneralUtil.limBoneMeal(worldObj, xCoord+randX, yCoord, zCoord+randZ, growthRecord);
-		GeneralUtil.limBoneMeal(worldObj, xCoord+randX, yCoord-1, zCoord+randZ, growthRecord);
-		GeneralUtil.limBoneMeal(worldObj, xCoord+randX, yCoord+1, zCoord+randZ, growthRecord);
+		GeneralUtil.applyBonemeal(worldObj, xCoord+randX, yCoord, zCoord+randZ);//, growthRecord);
+		GeneralUtil.applyBonemeal(worldObj, xCoord+randX, yCoord-1, zCoord+randZ);//, growthRecord);
+		GeneralUtil.applyBonemeal(worldObj, xCoord+randX, yCoord+1, zCoord+randZ);//, growthRecord);
 		
 	}
 }

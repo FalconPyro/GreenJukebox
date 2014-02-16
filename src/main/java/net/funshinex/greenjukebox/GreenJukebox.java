@@ -4,6 +4,7 @@ import net.funshinex.greenjukebox.block.GJ_Blocks;
 import net.funshinex.greenjukebox.config.ConfigHandler;
 import net.funshinex.greenjukebox.proxy.CommonProxy;
 import net.funshinex.greenjukebox.recipes.Crafting;
+import net.funshinex.greenjukebox.tabs.GJ_Tab;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -26,6 +27,9 @@ public class GreenJukebox {
 		
 		ConfigHandler.init(event.getSuggestedConfigurationFile());
 		GJ_Blocks.init();
+		GJ_Tab tab = new GJ_Tab("greenJukebox.Tab");
+		GJ_Blocks.greenJukebox.setCreativeTab(tab);
+		GJ_Blocks.greenNote.setCreativeTab(tab);
 	}
 	
 	@EventHandler
